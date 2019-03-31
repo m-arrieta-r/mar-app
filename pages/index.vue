@@ -1,7 +1,9 @@
 <template>
   <section class="container">
     <div>
-      <logo />
+      <a class="main-logo" href="/">
+        <logo />
+      </a>
       <h1 class="title title--animation">
         Minor Arrieta Rojas
       </h1>
@@ -20,10 +22,23 @@ export default {
     SocialIconsNav
   },
   mounted() {
-    setTimeout(() => {
+    setTimeout(() => { this.removeTitleTyping() }, 4000)
+    this.downloadLogo()
+  },
+  methods: {
+    removeTitleTyping() {
       const title = this.$el.getElementsByClassName('title--animation')[0]
-      title.classList.remove('title--animation')
-    }, 4000)
+      if (title) {
+        title.classList.remove('title--animation')
+      }
+    },
+    downloadLogo() {
+      const mainLogo = this.$el.getElementsByClassName('main-logo')[0]
+      mainLogo.addEventListener('contextmenu', function (event) {
+        event.preventDefault()
+        return false
+      }, false)
+    }
   }
 }
 </script>

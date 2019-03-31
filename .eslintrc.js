@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'nuxt/no-cjs-in-config': 'off',
     'vue/html-self-closing': 'off',
-    'vue/html-closing-bracket-spacing': 'off'
+    'vue/html-closing-bracket-spacing': 'off',
+    'no-console': 'off'
   }
 }
