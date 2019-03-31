@@ -2,8 +2,6 @@
   <div class="logo">
     <!-- eslint-disable vue/no-v-html -->
     <svg
-      height="32"
-      class="octicon octicon-mark-github text-white"
       viewBox="0 0 16 16"
       version="1.1"
       aria-hidden="true"
