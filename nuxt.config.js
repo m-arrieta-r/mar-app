@@ -12,8 +12,8 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
-      { hid: 'image', name: 'image', content: '/logo200w' },
-      { hid: 'og:image', name: 'og:image', content: '/logo200w' }
+      { hid: 'image', name: 'image', content: 'https://www.marrietar.space/logo200w.png' },
+      { hid: 'og:image', name: 'og:image', content: 'https://www.marrietar.space/logo200w.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-v1.png' }
