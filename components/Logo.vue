@@ -1,79 +1,59 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two" />
-    <div class="Triangle Triangle--one" />
-    <div class="Triangle Triangle--three" />
-    <div class="Triangle Triangle--four" />
+  <div class="logo">
+    <div class="triangle inverse" />
+    <div class="triangle bottom left" />
+    <div class="triangle bottom right" />
   </div>
 </template>
 
-<style>
-.VueToNuxtLogo {
-  display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
+<style scoped>
+.logo {
   position: relative;
-  overflow: hidden;
-  height: 180px;
-  width: 245px;
+  background: #3b8070;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: solid white 1px;
 }
 
-.Triangle {
+.triangle {
   position: absolute;
-  top: 0;
-  left: 0;
+  margin: auto;
   width: 0;
   height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0 solid white;
+  animation-name: height;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
-.Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41b883;
+.left {
+  left: 17%;
 }
 
-.Triangle--two {
-  top: 30px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3b8070;
+.right {
+  right: 17%;
 }
 
-.Triangle--three {
-  top: 60px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495e;
+.bottom {
+  bottom: 0;
 }
 
-.Triangle--four {
-  top: 120px;
-  left: 70px;
-  animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
+.inverse {
+  transform: rotate(180deg);
+  left: 40%;
+  top: -1px;
 }
 
-@keyframes turn {
-  100% {
-    transform: rotateX(0deg);
+@keyframes height {
+  from {
+    border-bottom: 0 solid white;
   }
-}
-
-@keyframes godown {
-  100% {
-    top: 180px;
-  }
-}
-
-@keyframes goright {
-  100% {
-    left: 70px;
+  to {
+    border-bottom: 50px solid white;
   }
 }
 </style>
