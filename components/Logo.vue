@@ -14,6 +14,7 @@
   height: 100px;
   margin: auto;
   border: solid white 1px;
+  animation: color 1.5s ease forwards;
 }
 
 .triangle {
@@ -50,10 +51,19 @@
 
 @keyframes height {
   from {
-    border-bottom: 0 solid white;
+    border-bottom: 0 solid #3b8070;;
   }
   to {
     border-bottom: 50px solid white;
+  }
+}
+
+@keyframes color {
+  from {
+    background: #35495e;
+  }
+  to {
+    background: #3b8070;
   }
 }
 </style>

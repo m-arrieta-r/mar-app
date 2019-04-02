@@ -1,0 +1,65 @@
+.social-networks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  margin: auto;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3b8070;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    animation: color 1.5s ease forwards;
+  }
+
+  &__item svg {
+    width: 70%;
+    fill: #3b8070;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  &__linkedin svg,
+  &__twitter svg {
+    animation-name: fade-bottom;
+  }
+
+  &__github svg {
+    animation-name: fade-top;
+  }
+}
+
+@keyframes fade-bottom {
+  from {
+    margin-bottom: -60px;
+    fill: #3b8070;
+  }
+  to {
+    margin-bottom: 0;
+    fill: white;
+  }
+}
+
+@keyframes fade-top {
+  from {
+    margin-bottom: 60px;
+    fill: #3b8070;
+  }
+  to {
+    margin-bottom: 0;
+    fill: white;
+  }
+}
+
+@keyframes color {
+  from {
+    background: #35495e;
+  }
+  to {
+    background: #3b8070;
+  }
+}

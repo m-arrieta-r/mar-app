@@ -1,15 +1,20 @@
 <template>
-  <section class="container">
-    <div>
-      <a class="main-logo" href="/">
-        <logo />
-      </a>
-      <h1 class="title title--animation">
-        Minor Arrieta Rojas
-      </h1>
-      <SocialIconsNav />
-    </div>
-  </section>
+  <div class="page">
+    <section class="container">
+      <div>
+        <a class="main-logo" href="/">
+          <logo />
+        </a>
+        <div class="title-container">
+          <h1 class="title title--animation">
+            Minor Arrieta Rojas
+          </h1>
+        </div>
+        <SocialIconsNav />
+      </div>
+    </section>
+  </div>
+
 </template>
 
 <script>
@@ -51,6 +56,8 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: fixed;
+  width: 100%;
 }
 
 .title {
@@ -68,6 +75,10 @@ export default {
   margin: 25px 0;
 }
 
+.title-container {
+  width: 287px;
+}
+
 .title--animation {
   border-right: .15em solid #35495e;
   animation:
@@ -83,7 +94,7 @@ export default {
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: #35495e }
-  50% { border-color: transparent }
+  from, to { border-right-color: #35495e }
+  50% { border-right-color: transparent }
 }
 </style>

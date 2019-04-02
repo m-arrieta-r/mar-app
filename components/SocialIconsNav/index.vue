@@ -13,4 +13,4 @@
 </template>
 
 <script src="./script.js"></script>
-<style src="./styles.css"></style>
+<style src="./styles.scss" lang="scss"></style>
