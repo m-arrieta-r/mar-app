@@ -1,12 +1,12 @@
 <template>
   <div class="logo">
-    <div class="triangle inverse" />
-    <div class="triangle bottom left" />
-    <div class="triangle bottom right" />
+    <div class="logo__triangle inverse" />
+    <div class="logo__triangle bottom left" />
+    <div class="logo__triangle bottom right" />
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .logo {
   position: relative;
   background: #3b8070;
@@ -15,20 +15,26 @@
   margin: auto;
   border: solid white 1px;
   animation: color 1.5s ease forwards;
-}
+  transition: .5s;
 
-.triangle {
-  position: absolute;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 0 solid white;
-  animation-name: height;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  &__triangle {
+    position: absolute;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid white;
+    animation-name: height;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    transition: .5s;
+  }
+
+  &--loading {
+    animation: rotateAnimation 1.2s ease infinite;
+  }
 }
 
 .left {
@@ -64,6 +70,15 @@
   }
   to {
     background: #3b8070;
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate3d(0, 1, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 1, 361deg);
   }
 }
 </style>

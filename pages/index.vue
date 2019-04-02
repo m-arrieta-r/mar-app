@@ -6,7 +6,7 @@
           <logo />
         </a>
         <div class="title-container">
-          <h1 class="title title--animation">
+          <h1 class="title text--animation">
             Minor Arrieta Rojas
           </h1>
         </div>
@@ -14,7 +14,6 @@
       </div>
     </section>
   </div>
-
 </template>
 
 <script>
@@ -32,9 +31,10 @@ export default {
   },
   methods: {
     removeTitleTyping() {
-      const title = this.$el.getElementsByClassName('title--animation')[0]
+      const typingClass = 'text--animation'
+      const title = this.$el.getElementsByClassName(typingClass)[0]
       if (title) {
-        title.classList.remove('title--animation')
+        title.classList.remove(typingClass)
       }
     },
     downloadLogo() {
@@ -58,11 +58,10 @@ export default {
   text-align: center;
   position: fixed;
   width: 100%;
+  font-family: 'Quicksand', 'Source Sans Pro' 'Helvetica Neue', Arial, sans-serif;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 2em;
@@ -79,7 +78,7 @@ export default {
   width: 287px;
 }
 
-.title--animation {
+.text--animation {
   border-right: .15em solid #35495e;
   animation:
     typing 3.5s steps(30, end),

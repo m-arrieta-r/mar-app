@@ -13,7 +13,10 @@
     width: 50px;
     height: 50px;
     overflow: hidden;
-    animation: color 1.5s ease forwards;
+    animation: color 1.5s ease;
+    &:hover {
+      background: #35495e;
+    }
   }
 
   &__item svg {
