@@ -76,7 +76,7 @@ export default {
 }
 
 .title-container {
-  width: 275px;
+  width: 280px;
 }
 
 .text--animation {
