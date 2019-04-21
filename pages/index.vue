@@ -67,7 +67,8 @@ export default {
   font-size: 30px;
   color: #35495e;
   overflow: hidden;
-  border-right: .15em solid white;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
   padding-right: 5px;
   white-space: nowrap;
   letter-spacing: 1px;
@@ -75,7 +76,7 @@ export default {
 }
 
 .title-container {
-  width: 265px;
+  width: 275px;
 }
 
 .text--animation {
