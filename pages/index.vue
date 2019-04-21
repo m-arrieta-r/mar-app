@@ -64,7 +64,7 @@ export default {
 .title {
   display: block;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 30px;
   color: #35495e;
   overflow: hidden;
   border-right: .15em solid white;
@@ -75,7 +75,7 @@ export default {
 }
 
 .title-container {
-  width: 287px;
+  width: 265px;
 }
 
 .text--animation {
