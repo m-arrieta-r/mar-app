@@ -1,7 +1,7 @@
 <template>
-  <div class="page">
-    <section class="container">
-      <div>
+  <div class="page page--centered">
+    <div class="">
+      <header class="header">
         <a class="main-logo" href="/">
           <logo />
         </a>
@@ -10,9 +10,11 @@
             Minor Arrieta Rojas
           </h1>
         </div>
+      </header>
+      <footer>
         <SocialIconsNav />
-      </div>
-    </section>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -49,14 +51,18 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.page {
+  transition: 1s;
+}
+
+.page--centered {
+ min-height: 100vh;
+ padding-top: 27vh;
+}
+
+.header {
+  padding: 10px;
   text-align: center;
-  position: fixed;
   width: 100%;
   font-family: 'Quicksand', 'Source Sans Pro' 'Helvetica Neue', Arial, sans-serif;
 }
@@ -77,6 +83,7 @@ export default {
 
 .title-container {
   width: 280px;
+  margin: auto;
 }
 
 .text--animation {

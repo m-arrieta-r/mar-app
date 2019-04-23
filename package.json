@@ -1,7 +1,7 @@
 {
   "name": "mar-app",
   "version": "1.0.0",
-  "description": "My personal site",
+  "description": "This is the personal web site of Minor Arrieta.",
   "author": "Minor Arrieta Rojas",
   "private": true,
   "scripts": {

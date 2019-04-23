@@ -1,5 +1,5 @@
-<template>
-  <div class="logo">
+a<template>
+  <div class="logo" style="--main-logo-size: 100px;">
     <div class="logo__triangle inverse" />
     <div class="logo__triangle bottom left" />
     <div class="logo__triangle bottom right" />
@@ -10,8 +10,8 @@
 .logo {
   position: relative;
   background: #3b8070;
-  width: 100px;
-  height: 100px;
+  width: var(--main-logo-size);
+  height: var(--main-logo-size);
   margin: auto;
   border: solid white 1px;
   animation: color 1.5s ease forwards;
@@ -22,8 +22,8 @@
     margin: auto;
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-left: calc(var(--main-logo-size)*0.1) solid transparent;
+    border-right: calc(var(--main-logo-size)*0.1) solid transparent;
     border-bottom: 0 solid white;
     animation-name: height;
     animation-duration: 1.5s;
@@ -60,7 +60,7 @@
     border-bottom: 0 solid #3b8070;;
   }
   to {
-    border-bottom: 50px solid white;
+    border-bottom: calc(var(--main-logo-size)/2) solid white;
   }
 }
 
