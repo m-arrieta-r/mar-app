@@ -12,5 +12,5 @@
   </div>
 </template>
 
-<script src="./script.js"></script>
+<script src="./script.ts" lang="ts"></script>
 <style src="./styles.scss" lang="scss"></style>

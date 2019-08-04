@@ -1,11 +1,12 @@
 module.exports = {
+  plugins: ['@typescript-eslint'],
   root: true,
   env: {
     browser: true,
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
   },
   extends: [
     '@nuxtjs',
@@ -13,6 +14,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    '@typescript-eslint/no-unused-vars': 'error',
     'nuxt/no-cjs-in-config': 'off',
     'vue/html-self-closing': 'off',
     'vue/html-closing-bracket-spacing': 'off',
