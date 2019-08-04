@@ -21,6 +21,7 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import SocialIconsNav from '~/components/SocialIconsNav'
+// import GyroNorm from 'gyronorm'
 
 export default {
   components: {
@@ -30,6 +31,9 @@ export default {
   mounted() {
     setTimeout(() => { this.removeTitleTyping() }, 4000)
     this.downloadLogo()
+    // const gn = new GyroNorm()
+
+    // gn.init().then(function () {})
   },
   methods: {
     removeTitleTyping() {
