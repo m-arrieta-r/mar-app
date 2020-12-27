@@ -1,12 +1,12 @@
-a<template>
-  <div class="logo" style="--main-logo-size: 100px;">
+<template>
+  <div class="logo" style="--main-logo-size: 100px">
     <div class="logo__triangle inverse" />
     <div class="logo__triangle bottom left" />
     <div class="logo__triangle bottom right" />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .logo {
   position: relative;
   background: #3b8070;
@@ -15,21 +15,21 @@ a<template>
   margin: auto;
   border: solid white 1px;
   animation: color 1.5s ease forwards;
-  transition: .5s;
+  transition: 0.5s;
 
   &__triangle {
     position: absolute;
     margin: auto;
     width: 0;
     height: 0;
-    border-left: calc(var(--main-logo-size)*0.1) solid transparent;
-    border-right: calc(var(--main-logo-size)*0.1) solid transparent;
+    border-left: calc(var(--main-logo-size) * 0.1) solid transparent;
+    border-right: calc(var(--main-logo-size) * 0.1) solid transparent;
     border-bottom: 0 solid white;
     animation-name: height;
     animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   &--loading {
@@ -52,15 +52,15 @@ a<template>
 .inverse {
   transform: rotate(180deg);
   left: 40%;
-  top: -1px;
+  top: 0;
 }
 
 @keyframes height {
   from {
-    border-bottom: 0 solid #3b8070;;
+    border-bottom: 0 solid #3b8070;
   }
   to {
-    border-bottom: calc(var(--main-logo-size)/2) solid white;
+    border-bottom: calc(var(--main-logo-size) / 2) solid white;
   }
 }
 

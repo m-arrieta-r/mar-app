@@ -20,44 +20,29 @@
            M5.477,420.56h92.184v-277.32H5.477V420.56z"
         />
       </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
     </svg>
   </div>
 </template>
 
 <style scoped>
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

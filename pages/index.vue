@@ -6,9 +6,7 @@
           <logo />
         </a>
         <div class="title-container">
-          <h1 class="title text--animation">
-            Minor Arrieta Rojas
-          </h1>
+          <h1 class="title text--animation">Minor Arrieta Rojas</h1>
         </div>
       </header>
       <footer>
@@ -19,35 +17,41 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import SocialIconsNav from '~/components/SocialIconsNav'
+import Logo from "~/components/Logo.vue";
+import SocialIconsNav from "~/components/SocialIconsNav";
 
 export default {
   components: {
     Logo,
-    SocialIconsNav
+    SocialIconsNav,
   },
   mounted() {
-    setTimeout(() => { this.removeTitleTyping() }, 4000)
-    this.downloadLogo()
+    setTimeout(() => {
+      this.removeTitleTyping();
+    }, 4000);
+    this.downloadLogo();
   },
   methods: {
     removeTitleTyping() {
-      const typingClass = 'text--animation'
-      const title = this.$el.getElementsByClassName(typingClass)[0]
+      const typingClass = "text--animation";
+      const title = this.$el.getElementsByClassName(typingClass)[0];
       if (title) {
-        title.classList.remove(typingClass)
+        title.classList.remove(typingClass);
       }
     },
     downloadLogo() {
-      const mainLogo = this.$el.getElementsByClassName('main-logo')[0]
-      mainLogo.addEventListener('contextmenu', function (event) {
-        event.preventDefault()
-        return false
-      }, false)
-    }
-  }
-}
+      const mainLogo = this.$el.getElementsByClassName("main-logo")[0];
+      mainLogo.addEventListener(
+        "contextmenu",
+        function (event) {
+          event.preventDefault();
+          return false;
+        },
+        false
+      );
+    },
+  },
+};
 </script>
 
 <style>
@@ -56,15 +60,16 @@ export default {
 }
 
 .page--centered {
- min-height: 100vh;
- padding-top: 27vh;
+  min-height: 100vh;
+  padding-top: 27vh;
 }
 
 .header {
   padding: 10px;
   text-align: center;
   width: 100%;
-  font-family: 'Quicksand', 'Source Sans Pro' 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro" "Helvetica Neue", Arial,
+    sans-serif;
 }
 
 .title {
@@ -87,21 +92,28 @@ export default {
 }
 
 .text--animation {
-  border-right: .15em solid #35495e;
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  border-right: 0.15em solid #35495e;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-right-color: #35495e }
-  50% { border-right-color: transparent }
+  from,
+  to {
+    border-right-color: #35495e;
+  }
+  50% {
+    border-right-color: transparent;
+  }
 }
 </style>

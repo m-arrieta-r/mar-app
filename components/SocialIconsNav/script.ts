@@ -1,15 +1,11 @@
-import { Component, Vue } from 'vue-property-decorator'
-import LinkedInLogo from '~/components/logos/LinkedInLogo.vue'
-import GithubLogo from '~/components/logos/GithubLogo.vue'
-import TwitterLogo from '~/components/logos/TwitterLogo.vue'
+import LinkedInLogo from '~/components/_logos/LinkedInLogo.vue'
+import GithubLogo from '~/components/_logos/GithubLogo.vue'
+import TwitterLogo from '~/components/_logos/TwitterLogo.vue'
 
-@Component({
+export default {
   components: {
     LinkedInLogo,
     GithubLogo,
-    TwitterLogo
+    TwitterLogo,
   }
-})
-export default class SocialIconsNav extends Vue {
-
 }
